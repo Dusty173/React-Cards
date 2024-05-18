@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { formatCard } from "./helpers";
 import { useAxios } from "./hooks";
 import PlayingCard from "./PlayingCard";
@@ -20,7 +20,7 @@ function CardTable() {
       </div>
       <div className="PlayingCardList-card-area">
         {cards.map(card => (
-          <PlayingCard key={card.id} front={cardData.image} />
+          <PlayingCard key={card.id} front={card.image} />
         ))}
       </div>
     </div>
